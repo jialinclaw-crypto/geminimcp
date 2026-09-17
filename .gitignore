@@ -1,0 +1,5 @@
+
+# 建置與快取產物
+build/
+*.egg-info/
+__pycache__/
