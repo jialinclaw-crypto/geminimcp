@@ -5,7 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "mcp[cli]>=1.21.2",
+    # 釘在 1.x：mcp 2.x 把 FastMCP 改名為 MCPServer 且 API 有變，
+    # server.py 仍是 v1 寫法（from mcp.server.fastmcp import FastMCP）。
+    # 要升 2.x 得先照官方 migration guide 改 server.py。
+    "mcp[cli]>=1.21.2,<2",
 ]
 
 [project.scripts]
